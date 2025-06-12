@@ -1,0 +1,24 @@
+import pybamm
+import matplotlib.pyplot as plt
+import numpy 
+import pandas as pd
+import scipy
+
+# A python class is a "blueprint" to create an object. A python object is a special variable that contain data (variables) and methods (functions) that can manipulate this data. In our case, the object will be a model, which we can then solve.
+
+# The goal of this code file is to convert a model to a class
+
+'''
+1. Here "SPM" is the name of the model and we can put any name we want.
+
+2. The things written inside the bracket refers that this class is ingerited from the BaseModel, which means that it contains all the variables and the functions present in the BaseModel.
+
+3. All classes have an __init__ method, which gets called when an object is created from a class.
+
+'''
+
+class SPM(pybamm.BaseModel):
+	def __init__(self):
+		super().__init__(name="SPM")        # This line of code calls the BaseModel using __init__ method
+		# Initialize your model here
+		
